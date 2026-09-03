@@ -10,7 +10,7 @@ que se agote el tiempo.
 
 ## Equipo — Fullstack Chipá
 
-- Leguizamón José Ignacio — Login, Seguridad y Esqueleto de la app
-- Molinari Matias — Menú y Cambio de contraseña
-- Martino Tiago — Diseño de niveles (salas)
-- Nuñez Felipe — Diseño de niveles (contenido técnico)
+- Leguizamón José Ignacio
+- Molinari Matias
+- Martino Tiago
+- Nuñez Felipe
