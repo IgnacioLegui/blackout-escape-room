@@ -1,0 +1,14 @@
+# Configuración de IDE
+.idea/
+
+# Archivos compilados de Python
+__pycache__/
+*.pyc
+
+# Entorno virtual (si en algún momento crean uno)
+.venv/
+venv/
+
+# uv — no lo usamos en este proyecto (solo librería estándar)
+pyproject.toml
+uv.lock
