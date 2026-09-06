@@ -1,88 +1,39 @@
-# ============================================================
-# BLACKOUT — Escape Room Virtual
-# Programación I - TPO Trabajo en clase 09_08 (entrega preliminar)
-# Integrantes: Leguizamón José Ignacio, Martino Tiago, Molinari Matias y Nuñez Felipe
-# ============================================================
+"""
+BLACKOUT — Escape Room Virtual
+main.py — Punto de entrada de la aplicación.
+Integrantes: Leguizamón José Ignacio, Martino Tiago, Molinari Matias, Nuñez Felipe
 
-USUARIO_VALIDO = "jugador"
-CONTRASEÑA_INICIAL = "Chipa2026!"
-CORRIMIENTO = 3  # desplazamiento del cifrado César
-
-# ============================================================
-# MÓDULO A — SEGURIDAD
-# ============================================================
-
-def encriptar_contraseña(contraseña, corrimiento):
-    """Encripta una contraseña aplicando un cifrado César (corrimiento de caracteres).
-
-    Parámetros:
-        contraseña (str): Contraseña en texto plano.
-        corrimiento (int): Cantidad de posiciones a desplazar cada caracter.
-
-    Retorna:
-        str: Contraseña encriptada.
-    """
-    encriptada = ""
-    for caracter in contraseña:
-        encriptada = encriptada + chr(ord(caracter) + corrimiento)
-    return encriptada
+Orquesta el flujo general: Login -> Menú -> Jugar / Cambiar contraseña /
+Cerrar sesión. Cada responsabilidad vive en su propio módulo (ver
+README.md para el detalle de la arquitectura).
 
 
-# ============================================================
-# MÓDULO A — LOGIN
-# ============================================================
+"""
 
-def pedir_credenciales():
-    """Solicita usuario y contraseña por teclado.
+from autenticacion import encriptar_contraseña, iniciar_sesion, USUARIO_VALIDO, CONTRASEÑA_INICIAL, CORRIMIENTO
+from menu import mostrar_menu, pedir_opcion_menu, mostrar_instrucciones, cambiar_contraseña
+
+
+def jugar():
+    """Inicia el recorrido del Escape Room: Sala 1 (Ahorcado) y Sala 2 (Batalla Naval).
 
     Parámetros:
         No recibe parámetros.
 
     Retorna:
-        tuple: usuario ingresado (str) y contraseña ingresada (str).
+        bool: True si el jugador superó ambas salas, False si abandonó o
+              perdió en alguna de ellas.
     """
-    usuario = input("Usuario: ")
-    contraseña = input("Contraseña: ")
-    return usuario, contraseña
-
-
-def validar_login(usuario, contraseña, contraseña_valida_encriptada):
-    """Valida las credenciales ingresadas contra las almacenadas.
-
-    Parámetros:
-        usuario (str): Usuario ingresado por el jugador.
-        contraseña (str): Contraseña ingresada por el jugador (sin encriptar).
-        contraseña_valida_encriptada (str): Contraseña vigente, ya encriptada.
-
-    Retorna:
-        bool: True si las credenciales son correctas, False en caso contrario.
-    """
-    contraseña_encriptada = encriptar_contraseña(contraseña, CORRIMIENTO)
-    if usuario == USUARIO_VALIDO and contraseña_encriptada == contraseña_valida_encriptada:
-        return True
+    # TODO (Martino Tiago / Nuñez Felipe): reemplazar este cuerpo por:
+    #   from ahorcado import jugar_ahorcado
+    #   from batalla_naval import jugar_batalla_naval
+    #   if jugar_ahorcado():
+    #       return jugar_batalla_naval()
+    #   return False
+    # una vez que jugar_ahorcado() esté lista y probada en ahorcado.py.
+    print("Sala 1 (Ahorcado) y Sala 2 (Batalla Naval) en desarrollo.")
     return False
 
-
-def iniciar_sesion(contraseña_valida_encriptada):
-    """Controla el ciclo de login, permitiendo reintentos ante credenciales inválidas.
-
-    Parámetros:
-        contraseña_valida_encriptada (str): Contraseña vigente, ya encriptada.
-
-    Retorna:
-        None: Solo retorna cuando el login fue exitoso.
-    """
-    autenticado = False
-    while not autenticado:
-        usuario, contraseña = pedir_credenciales()
-        autenticado = validar_login(usuario, contraseña, contraseña_valida_encriptada)
-        if not autenticado:
-            print("Usuario o contraseña incorrectos. Intente nuevamente.")
-
-
-# ============================================================
-# MÓDULO A — ESQUELETO DE LA APLICACIÓN
-# ============================================================
 
 def main():
     """Punto de entrada de la aplicación: controla el flujo Login -> Menú.
@@ -117,33 +68,6 @@ def main():
             elif opcion == 3:
                 print("Cerrando sesión...")
                 en_menu = False
-
-
-# ============================================================
-# STUBS DE OTROS MÓDULOS
-# ============================================================
-
-def mostrar_menu():
-    pass  # A DESARROLLAR
-
-
-def pedir_opcion_menu():
-    pass  # A DESARROLLAR
-    return 3
-
-
-def mostrar_instrucciones():
-    pass  # A DESARROLLAR
-
-
-def cambiar_contraseña(contraseña_actual_encriptada):
-    pass  # A DESARROLLAR
-    return contraseña_actual_encriptada
-
-
-def jugar():
-    pass  # A DESARROLLAR
-    return False
 
 
 main()
