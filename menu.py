@@ -54,8 +54,8 @@ def mostrar_instrucciones():
     Retorna:
         None: Solo produce una salida por pantalla.
     """
-    # TODO (Molinari Matias): reemplazar por el texto definitivo de la
-    # historia y ambientación de Blackout, justificado a 80 columnas.
+    # TODO: reemplazar por el texto definitivo de la historia
+    #  y ambientación de Blackout, justificado a 80 columnas.
     print("Instrucciones: (pendiente de redacción final)")
 
 
@@ -70,8 +70,7 @@ def cambiar_contraseña(contraseña_actual_encriptada):
              misma contraseña recibida si el jugador canceló o no cumplió
              las validaciones.
     """
-    # TODO (Molinari Matias): implementar las 7 validaciones de la nueva
-    # contraseña. Usar encriptar_contraseña(nueva, CORRIMIENTO) al final
-    # para devolver la contraseña ya encriptada.
+    # TODO: implementar las 7 validaciones de la nueva contraseña.
+    #  Usar encriptar_contraseña(nueva, CORRIMIENTO) al final para devolver la contraseña ya encriptada.
     print("Función de cambio de contraseña en desarrollo.")
     return contraseña_actual_encriptada

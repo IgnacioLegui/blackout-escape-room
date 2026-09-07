@@ -1,17 +1,17 @@
 """
 BLACKOUT — Escape Room Virtual
 main.py — Punto de entrada de la aplicación.
-Integrantes: Leguizamón José Ignacio, Martino Tiago, Molinari Matias, Nuñez Felipe
+Intregrantes: José Ignacio Leguizamón, Molinari Matias, Martino Tiago, Nuñez Felipe
 
 Orquesta el flujo general: Login -> Menú -> Jugar / Cambiar contraseña /
 Cerrar sesión. Cada responsabilidad vive en su propio módulo (ver
 README.md para el detalle de la arquitectura).
 
-
 """
 
 from autenticacion import encriptar_contraseña, iniciar_sesion, USUARIO_VALIDO, CONTRASEÑA_INICIAL, CORRIMIENTO
 from menu import mostrar_menu, pedir_opcion_menu, mostrar_instrucciones, cambiar_contraseña
+from ahorcado import jugar_ahorcado
 
 
 def jugar():
@@ -24,15 +24,15 @@ def jugar():
         bool: True si el jugador superó ambas salas, False si abandonó o
               perdió en alguna de ellas.
     """
-    # TODO (Martino Tiago / Nuñez Felipe): reemplazar este cuerpo por:
-    #   from ahorcado import jugar_ahorcado
-    #   from batalla_naval import jugar_batalla_naval
-    #   if jugar_ahorcado():
-    #       return jugar_batalla_naval()
-    #   return False
-    # una vez que jugar_ahorcado() esté lista y probada en ahorcado.py.
-    print("Sala 1 (Ahorcado) y Sala 2 (Batalla Naval) en desarrollo.")
-    return False
+    supero_sala_1 = jugar_ahorcado()
+    if not supero_sala_1:
+        return False
+    # TODO : reemplazar esta línea por
+    #  from batalla_naval import jugar_batalla_naval
+    #   return jugar_batalla_naval()
+    #   una vez que la Sala 2 esté lista.
+    print("Sala 2 (Batalla Naval) en desarrollo.")
+    return True
 
 
 def main():

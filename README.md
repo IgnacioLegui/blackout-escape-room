@@ -37,6 +37,6 @@ Usuario de prueba: `jugador` — Contraseña: `Chipa2026!`
 main.py            → punto de entrada, orquesta el flujo general
 autenticacion.py    → login y encriptación de contraseña (cifrado César)
 menu.py             → menú principal y cambio de contraseña
-ahorcado.py         → Sala 1 (en desarrollo)
+ahorcado.py         → Sala 1
 batalla_naval.py    → Sala 2 (pendiente de crear)
 ```
