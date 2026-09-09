@@ -25,6 +25,17 @@ def jugar():
         bool: True si el jugador superó ambas salas, False si abandonó o
               perdió en alguna de ellas.
     """
+    print()
+    print("=" * 60)
+    print("Es la noche del final de Programación I. De la nada, se corta")
+    print("la luz en toda la ciudad. En medio del apagón se te aparece un")
+    print("hombre que nadie más parece ver: dice que él mantiene la red")
+    print("eléctrica funcionando, y que el corte no fue casualidad.")
+    print("Te ofrece un trato: resolver una serie de desafíos para llegar")
+    print("a la facultad a tiempo para rendir el final.")
+    print("=" * 60)
+    print()
+
     supero_juego = False
     if jugar_ahorcado():
         supero_juego = jugar_batalla_naval()

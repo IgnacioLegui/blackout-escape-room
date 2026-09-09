@@ -22,8 +22,7 @@ facultad a tiempo para rendir el final.
 
 ## Cómo ejecutar
 
-Requiere Python 3. No usa librerías externas, solo `random` de la
-librería estándar.
+Requiere Python 3. No usa librerías externas, solo módulos de la librería estándar (random y textwrap).
 
 ```
 python main.py
