@@ -15,7 +15,6 @@ from autenticacion import encriptar_contraseña, CORRIMIENTO
 
 CARACTERES_ESPECIALES = "!@#$%^&*()_+-=[]{}|;:,.<>?/~`"
 
-
 def mostrar_menu():
     """Muestra las opciones del menú principal por pantalla.
 
@@ -41,11 +40,11 @@ def pedir_opcion_menu():
     Retorna:
         int: Opción válida elegida (0, 1, 2 o 3).
     """
-    opcion = int(input("Elija una opción: "))
-    while opcion < 0 or opcion > 3:
-        print("ERROR. Opción fuera de rango.")
-        opcion = int(input("Elija una opción: "))
-    return opcion
+    entrada = input("Elija una opción: ")
+    while (not entrada.isdigit()) or int(entrada) < 0 or int(entrada) > 3:
+        print("ERROR. Debe ingresar un número entre 0 y 3.")
+        entrada = input("Elija una opción: ")
+    return int(entrada)
 
 
 def mostrar_instrucciones():
