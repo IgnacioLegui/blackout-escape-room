@@ -1,6 +1,7 @@
 """
 BLACKOUT — Escape Room Virtual
 Módulo de autenticación y seguridad.
+Integrantes: Leguizamón José Ignacio, Molinari Matias, Martino Tiago, Nuñez Felipe
 
 Resuelve el subproblema de login: encriptación de contraseña y validación
 de credenciales. encriptar_contraseña() es reutilizable — el módulo de

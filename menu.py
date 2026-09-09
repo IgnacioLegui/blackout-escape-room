@@ -1,6 +1,7 @@
 """
 BLACKOUT — Escape Room Virtual
 Módulo de menú y gestión de contraseña.
+Integrantes: Leguizamón José Ignacio, Molinari Matias, Martino Tiago, Nuñez Felipe
 
 Resuelve el subproblema de navegación (menú principal) y el cambio de
 contraseña, reutilizando encriptar_contraseña() del módulo de autenticación.

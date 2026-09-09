@@ -1,6 +1,7 @@
 """
 BLACKOUT — Escape Room Virtual
 Sala 1 — Ahorcado.
+Integrantes: Leguizamón José Ignacio, Molinari Matias, Martino Tiago, Nuñez Felipe
 
 Resuelve el subproblema de la primera sala: el jugador debe descubrir una
 palabra oculta relacionada con la temática del juego (vocabulario de
